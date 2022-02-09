@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- 文字コード設定 -->
+		<meta charset="utf-8" />
+        <!-- ページタイトル(タブに表示される名前) -->
+		<title>川原瑠梨ポートフォリオ</title>
+        <meta name="description" content="川原瑠梨ポートフォリオ">
+        <!-- CSS -->
+        <link rel="stylesheet" href="style.css" />
+        <link rel="icon" type="images/png" href="img/rurilogo.png">
+        <!--ボタンの立体-->
+        <link rel="stylesheet" type="text/css" href="css/7-1-18.css">
+        <!--円グラフ-->
+        <link rel="stylesheet" type="text/css" href="css/9-5-6.css">
+    </head>
+    <body>
+        <div class="yokonarabe">
+            <p class="top-text">RURI KAWAHARA</p>
+            <a href=""><img class="top-logosize"src="img/rurilogo.png"></a>
+            <p class="top-text">PORTFOLIO</p>
+        </div>
+        <div class="header-color yokonarabe"> 
+            <a href=""><p class="header-text">WORKS</p></a>
+            <a href=""><p class="header-text">ABOUT</p></a>
+            <a href=""><p class="header-text">SKILL</p></a>
+            <a href=""><p class="header-text">SNS/CONTACT</p></a>
+        </div>
+        <div class="MV">
+            <img src="img/a.png">
+        </div>
+       
+
+        <!--JAVA-->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+        $(function($) {
+            const $bar = $('.header-color');
+            const barHeight = $bar.outerHeight();
+            const offset = $bar.offset();
+
+            $(window).scroll(function () {
+            if($(window).scrollTop() > offset.top) {
+                $bar.addClass('js-fixed');
+                $('.MV').css('padding-top', barHeight);
+            } else {
+                $bar.removeClass('js-fixed');
+                $('.MV').css('padding-top', 0);
+            }
+            });
+        });
+        </script>
+        <div>
+            <div class="tatenarabe">
+                <div class="title-space">
+                    <p class="title-text">WORKS</p>
+                    <img class="title-line"src="img/line.png">
+                </div>
+            </div>
+            <div class="works-layout">
+                <div class="relative"><a href="">
+                    <div class="tatenarabe1 float1">
+                        <img class="works-icon-size"src="img/web.png">
+                        <img class="works-size"src="img/irohani1.png">
+                    </div>
+                </a></div>
+                <div class="relative"><a href="">
+                    <div class="tatenarabe1 float1">
+                        <img class="works-icon-size"src="img/web.png">
+                        <img class="works-size "src="img/port1.png">
+                    </div>
+                </a></div>
+                <div class="relative"><a href="">
+                    <div class="tatenarabe1 float1">
+                        <img class="works-icon-size"src="img/movie.png">
+                        <img class="works-size"src="img/mark1.png">
+                    </div>
+                </a></div>
+                <div class="relative"><a href="">
+                    <div class="tatenarabe1 float1">
+                        <img class="works-icon-size"src="img/movie.png">
+                        <img class="works-size"src="img/mix1.png">
+                    </div>
+                </a></div>
+                <div class="relative"><a href="">
+                    <div class="tatenarabe1 float1">
+                        <img class="works-icon-size"src="img/iphone.png">
+                        <img class="works-size"src="img/flag1.png">
+                    </div>
+                </a></div>
+                <div class="relative"><a href="">
+                    <div class="tatenarabe1 float1">
+                        <img class="works-icon-size"src="img/movie.png">
+                        <img class="works-size"src="img/dreaming1.png">
+                    </div>
+                </a></div>
+                <div class="relative"><a href="">
+                    <div class="tatenarabe1 float1">
+                        <img class="works-icon-size"src="img/portal.png">
+                        <img class="works-size"src="img/tcle1.png">
+                    </div>
+                </a></div> 
+                <div class="relative"><a href="">
+                    <div class="tatenarabe1 float1">
+                        <img class="works-icon-size"src="img/iphone.png">
+                        <img class="works-size"src="img/reshibo.png">
+                    </div>
+                </a></div>
+                <div class="relative"><a href="">
+                    <div class="tatenarabe1 float1">
+                        <img class="works-icon-size"src="img/movie.png">
+                        <img class="works-size"src="img/iwakan1.png">
+                    </div>
+                </a></div>         
+            </div>
+        </div>
+        <div class="about-back">
+            <div class="tatenarabe">
+                <div class="title-space">
+                    <p class="title-text">ABOUT</p>
+                    <img class="title-line"src="img/line.png">
+                    
+                </div>
+            </div>
+            <div class="yokonarabe about-space">
+                <img class="about-me-size"src="img/me.png">
+                <div >
+                    <p class="about-text-1">川原瑠梨｜RURI KAWAHARA</p>
+                    <p class="about-text-2">２０００年１０月３１日生まれ　愛知県出身</p>
+                    <p class="about-text-2">愛知県立豊田西高等学校 卒業</p>
+                    <p class="about-text-2">名古屋市立大学芸術工学部情報環境デザイン学科　在学</p>
+                    <p class="about-text-2">小林美術研究所　卒業</p>
+                    <p class="about-text-2">趣味：貯金・ショッピング</p>
+                    <p class="about-text-2">特技：たくさん食べること（全盛期は朝食に切り餅１０個！）</p>
+                </div>
+            </div>
+        </div>
+        
+        <div>
+
+        </div>
+        <div class="tatenarabe">
+            <div class="title-space skill-underspace">
+                <p class="title-text">SKILL</p>
+                <img class="title-line"src="img/line.png">
+
+                <section id="Skill" class="profileSection">
+                    <table>
+                        <tr>
+                            <td class="skillSet">
+                                <div class="skillCircle circle-ill"><div class="circle-inner">Illustrator</div></div>
+                                <div class="skillCircle circle-ps"><div class="circle-inner">Photoshop</div></div>
+                                <div class="skillCircle circle-ae"><div class="circle-inner">AfterEffect</div></div>
+                                <div class="skillCircle circle-pr"><div class="circle-inner">PremirePro</div></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="skillSet">
+                                <div class="skillCircle circle-xd"><div class="circle-inner">XD</div></div>
+                                <div class="skillCircle circle-html"><div class="circle-inner">HTML</div></div>
+                                <div class="skillCircle circle-css"><div class="circle-inner">CSS</div></div>
+                                <div class="skillCircle circle-java"><div class="circle-inner">Javascript</divv></div>
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+            </div>
+        </div>
+        <div class="tatenarabe about-back skill-underspace">
+            <div class="title-space">
+                <p class="title-text">SNS/CONTACT</p>
+                <img class="title-line"src="img/line.png">
+            </div>
+            <div class="sns-layout">
+                <a href=""><img class="sns-icon-size float2"src="img/mail.png"></a>
+                <a href=""><img class="sns-icon-size float2"src="img/insta.png"></a>
+                <a href=""><img class="sns-icon-size float2"src="img/twi.png"></a>
+            </div>
+        </div>
+        <script>
+            $(function(){
+                $(window).scroll(function (){
+                    $('.fadein').each(function(){
+                    var elementTop = $(this).offset().top;
+                    var scroll = $(window).scrollTop();
+                    var windowHeight = $(window).height();
+                    if (scroll > elementTop - windowHeight + 100){
+                        $(this).addClass('scrollin');
+                    }
+                    });
+                });
+            });
+        </script>
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
+        <!--自作のJS-->
+        <script src="js/9-5-6.js"></script>
+
+        <script>
+        </script>
+
+    </body>
+</html>    

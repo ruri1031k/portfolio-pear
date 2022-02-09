@@ -1,0 +1,453 @@
+@charset "UTF-8";
+
+/*共通部分*/
+html{
+    font-size:100%;
+}
+a{
+    text-decoration:none;
+}
+img{
+    max-width: 100%;
+}
+li{
+	list-style:none;
+}
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+@font-face {
+	font-family:"zen1";
+	src: url(font/Zen_Kaku_Gothic_New/ZenKakuGothicNew-Regular.ttf);
+	font-weight: 400;
+}
+@font-face {
+	font-family:"zen2";
+	src: url(font/Zen_Kaku_Gothic_New/ZenKakuGothicNew-Medium.ttf);
+	font-weight: 400;
+}
+
+.top-logosize{
+    width:5vw;
+}
+.top-text{
+    font-family: "zen2";
+    padding-left: 70px;
+    padding-right: 70px;
+    font-size: 1.7vw;
+    color: #333333;
+}
+.header-text{
+    font-family: "zen2";
+    font-size: 1.5vw;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: #333333;
+}
+.header-color{
+    background-color:rgba(255,255,0,0.9);
+    width: 100%;
+    z-index: 1000;
+}
+
+.yokonarabe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.yokonarabe1{
+	display: flex;
+	justify-content: space-around;
+}
+.tatenarabe{
+    text-align: center;
+}
+.tatenarabe1{
+    display: flex;
+    justify-content: center;
+}
+
+.title-text{
+    font-family: "zen2";
+    font-size: 2.5vw;
+    color: #333333;
+    padding-bottom: 1%;
+}
+.title-line{
+    width:20%;
+    padding-bottom: 6%;
+}
+.title-space{
+    padding-top: 4%;
+}
+.js-fixed{
+    position:fixed;
+    top:0;
+}
+
+.MV{
+    width: 100%;
+}
+
+/*about*/
+.about-me-size{
+    width:33%;
+    padding-right: 10%;
+}
+.about-text-1{
+    font-family: "zen2";
+    font-size: 1.8vw;
+    color: #333333;
+    padding-bottom: 8%;
+}
+.about-text-2{
+    font-family: "zen1";
+    font-size: 1.3vw;
+    color: #333333;
+}
+.about-space{
+    padding-bottom: 7%;
+}
+.about-back{
+    background-color: #f8fafc;
+}
+
+
+/*works*/
+.works-layout{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:10%;  
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-bottom: 30%;
+    padding-top: 6%;
+}
+.works-layout2{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.works-size{
+    /* padding-left:4%;
+    padding-right:4%; */
+    padding-bottom: 0;
+}
+.works-icon-size{
+    width:38%;
+    position: absolute;
+    top:-13%;
+}
+
+
+.fadein {
+  opacity : 0;
+  transform : translate(0, 50px);
+  transition:all 0.5s;
+}
+ 
+.fadein.scrollin {
+  opacity : 1;
+  transform : translate(0, 0);
+}
+
+.float1{
+    /*アニメーションの指定*/
+    transition: all .3s;
+    top:0;
+}
+/*hoverをしたらボックスに影がつく*/
+.float1:hover {
+    transform: translateY(10px);
+    box-shadow: 13px 13px rgba(255,255, 0, 1);
+}
+
+.relative{
+    position: relative;
+}
+
+.float2{
+    /*アニメーションの指定*/
+    transition: all .3s;
+    top:0;
+}
+/*hoverをしたらボックスに影がつく*/
+.float2:hover {
+    transform: translateY(7px);
+	filter: drop-shadow(4px 4px   rgba(255,255,0,1))
+}
+
+
+
+/*skill*/
+#Skill table {
+    width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+    
+#Skill table th {
+    width: 230px;
+    padding: 60px 0 0;
+}
+    
+#Skill table td {
+    padding: 60px 0 0;
+}
+    
+#Skill table tr:nth-child(1) th,
+#Skill table tr:nth-child(1) td {
+    padding-top: 0;
+}
+    
+#Skill table td.skillSet {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+.skillCircle {
+	position: relative;
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	text-align: center;
+	overflow: hidden;
+	z-index: 1;
+}
+
+.skillCircle::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -60px;
+	width: 120px;
+	height: 120px;
+	transform-origin: right 60px;
+	z-index: 2;
+	color: yellow;
+}
+
+.skillCircle::after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 60px;
+	width: 120px;
+	height: 120px;
+	transform-origin: left 60px;
+	z-index: 3;
+	color: yellow;
+}
+
+.skillCircle .circle-inner {
+	position: absolute;
+    font-family:"zen1";
+	top: 10px;
+	left:10px;
+	width: 100px;
+	height: 100px;
+	padding-top: 38px;
+	background: #fff;
+	border-radius: 50%;
+	z-index: 4;
+}
+
+.circle-ill {
+	background: yellow;	
+}
+.circle-ill::before {
+	background: gray;
+}
+.circle-ill::after {
+	background: gray;
+	animation: rotateCircleRightILL 8s linear infinite
+}
+
+.circle-ps {
+	background: yellow;	
+}
+.circle-ps::before {
+	background: gray;
+}
+.circle-ps::after {
+	background: gray;
+	animation: rotateCircleRightPS 8s linear infinite;
+}
+
+.circle-ae {
+	background: yellow;	
+}
+.circle-ae::before {
+	background: gray;
+    animation: rotateCircleLeftAE 8s linear infinite;
+}
+.circle-ae::after {
+	background: gray;
+	animation: rotateCircleRightAE 8s linear infinite;
+}
+
+.circle-pr {
+	background: yellow;	
+}
+.circle-pr::before {
+	background: gray;
+    animation: rotateCircleLeftPR 8s linear infinite;
+}
+.circle-pr::after {
+	background: gray;
+	animation: rotateCircleRightPR 8s linear infinite;
+}
+
+.circle-xd {
+	background: yellow;	
+}
+.circle-xd::before {
+	background: gray;
+}
+.circle-xd::after {
+	background: gray;
+	animation: rotateCircleRightXd 8s linear infinite;
+}
+
+.circle-html {
+	background: yellow;	
+}
+.circle-html::before {
+	background: gray;
+}
+.circle-html::after {
+	background: gray;
+	animation: rotateCircleRightHTML 8s linear infinite;
+}
+.circle-css {
+	background: yellow;	
+}
+.circle-css::before {
+	background: gray;
+}
+.circle-css::after {
+	background: gray;
+	animation: rotateCircleRightCSS 8s linear infinite;
+}
+.circle-java {
+	background: yellow;	
+}
+.circle-java::before {
+	background: gray;
+}
+.circle-java::after {
+	background: gray;
+	animation: rotateCircleRightJAVA 8s linear infinite;
+}
+
+@keyframes rotateCircleRightILL {
+	0%   { transform: rotate(0deg); }
+	15%  { transform: rotate(120deg); }
+	100% { transform: rotate(120deg); }
+}
+@keyframes rotateCircleRightPS {
+	0%   { transform: rotate(0deg); }
+	15%  { transform: rotate(40deg); }
+	100% { transform: rotate(40deg); }
+}
+@keyframes rotateCircleRightAE {
+	0%   {
+		transform: rotate(0deg);
+		background: gray;
+	}
+	15.0%  {
+		transform: rotate(180deg);
+		background: gray;
+	}
+	15.01% {
+		transform: rotate(360deg);
+		background: yellow;
+	}
+	100% {
+		transform: rotate(360deg);
+		background: yellow;
+	}
+}
+@keyframes rotateCircleLeftAE {
+	0%   { transform: rotate(0deg); }
+	15.01%  { transform: rotate(0deg); }
+	30%  { transform: rotate(120deg); }
+	100% { transform: rotate(120deg); }
+}
+
+@keyframes rotateCircleRightPR {
+	0%   {
+		transform: rotate(0deg);
+		background: gray;
+	}
+	15%  {
+		transform: rotate(180deg);
+		background: gray;
+	}
+	15.01% {
+		transform: rotate(360deg);
+		background: yellow;
+	}
+	100% {
+		transform: rotate(360deg);
+		background: yellow;
+	}
+}
+
+@keyframes rotateCircleLeftPR {
+	0%   { transform: rotate(0deg); }
+	15%  { transform: rotate(0deg); }
+	30%  { transform: rotate(70deg); }
+	100% { transform: rotate(70deg); }
+}
+
+@keyframes rotateCircleRightXd {
+	0%   { transform: rotate(0deg); }
+	15%  { transform: rotate(90deg); }
+	100% { transform: rotate(90deg); }
+}
+@keyframes rotateCircleRightHTML {
+	0%   { transform: rotate(0deg); }
+	15%  { transform: rotate(100deg); }
+	100% { transform: rotate(100deg); }
+}
+@keyframes rotateCircleRightCSS {
+	0%   { transform: rotate(0deg); }
+	15%  { transform: rotate(100deg); }
+	100% { transform: rotate(100deg); }
+}
+@keyframes rotateCircleRightJAVA {
+	0%   { transform: rotate(0deg); }
+	15%  { transform: rotate(30deg); }
+	100% { transform: rotate(30deg); }
+}
+
+
+.skill-underspace{
+    padding-bottom: 10%;
+}
+
+/*SNS*/
+.sns-layout{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:10%;  
+	padding-right: 36%;
+    padding-left: 36%;
+	padding-top: 3%;
+	padding-bottom: 3%;
+}
+.sns-icon-size{
+	padding-bottom: 10%;
+	padding-right: 10%;
+}
