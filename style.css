@@ -70,6 +70,10 @@ footer{
 	display: flex;
 	justify-content: space-around;
 }
+.yokonarabe2{
+	display: flex;
+	justify-content:flex-end;
+}
 .tatenarabe{
     text-align: center;
 }
@@ -87,6 +91,12 @@ footer{
 .title-line{
     width:20%;
     padding-bottom: 4%;
+}
+.title-line2{
+    width:80%;
+    padding-bottom: 4%;
+	padding-left:15%;
+	padding-top:5%;
 }
 .title-space{
     padding-top: 4%;
@@ -472,4 +482,50 @@ footer{
     color: #ffffff;
 	padding-top:3%;
 	padding-bottom: 3%;
+}
+
+
+.works-mv-space{
+	padding-top: 3%;
+	padding-bottom: 5%;
+}
+.works-mv-title-moji-1{
+	font-family:"zen2";
+	font-size:2.5vw;
+	padding-top: 10%;
+	padding-left: 15%;
+	color: #333333;
+}
+.works-mv-title-moji-2{
+	font-family:"zen1";
+	font-size:1.1vw;
+	padding-top: 3%;
+	padding-left: 15%;
+	color: #333333;
+}
+.works-mv-title-moji-3{
+	font-family:"zen1";
+	font-size:1.1vw;
+	padding-top: 1%;
+	padding-left: 15%;
+	color: #333333;
+}
+/*irohani*/
+.mv-top-size{
+	width:58%;
+}
+.mv-title-size{
+	width:42%;
+}
+
+.works-moji1{
+	font-family: "zen1";
+	font-size: 1.1vw;
+	color: #333333;
+	padding-bottom: 0.4%;
+}
+.works-promaru-size{
+	width:17%;
+	padding-left:2%;
+	padding-right: 2%;
 }
