@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- 文字コード設定 -->
+		<meta charset="utf-8" />
+        <!-- ページタイトル(タブに表示される名前) -->
+		<title>川原瑠梨ポートフォリオ</title>
+        <meta name="description" content="川原瑠梨ポートフォリオ">
+        <!-- CSS -->
+        <link rel="stylesheet" href="style.css" />
+        <link rel="icon" type="images/png" href="img/rurilogo.png">
+        <!--ボタンの立体-->
+        <link rel="stylesheet" type="text/css" href="css/7-1-18.css">
+        <!--円グラフ-->
+        <link rel="stylesheet" type="text/css" href="css/9-5-6.css">
+    </head>
+    <body>
+        <div class="yokonarabe">
+            <p class="top-text">RURI KAWAHARA</p>
+            <a href="index.html"><img class="top-logosize"id="top"src="img/rurilogo.png"></a>
+            <p class="top-text">PORTFOLIO</p>
+        </div>
+        <div class="header-color yokonarabe"> 
+            <a href="index.html"><p class="header-text">WORKS</p></a>
+            <a href="#about"><p class="header-text">ABOUT</p></a>
+            <a href="#skill"><p class="header-text">SKILL</p></a>
+            <a href="#sns"><p class="header-text">SNS/CONTACT</p></a>
+        </div>
+        <div class="yokonarabe2 works-mv-space">
+            <div class="mv-title-size">
+                <p class="works-mv-title-moji-1">いろはに</p>
+                <p class="works-mv-title-moji-2">2021-2022 WEBデザイン/コーディング</p>
+                <img class="title-line2"src="img/line2.png">
+                <p class="works-mv-title-moji-2">実習で制作した架空の伝統工芸体験教室予約サイトです。</p>
+                <p class="works-mv-title-moji-3">スマートフォンを想定したWEBサイト制作に初挑戦しました。</p>
+                <p class="works-mv-title-moji-3">より良い労働環境を提供するために</p>
+                <p class="works-mv-title-moji-3">今を生きる私たちにできることを追求した作品です。</p>
+            </div>
+            <img class="mv-top-size"src="img/irohani-mv.png">
+        </div>
+        <footer class="tatenarabe"> 
+            <p class="footer-text">THANK YOU FOR COMING MY SITE !</p>
+        </footer>
+        <script>
+            $(function(){
+                $(window).scroll(function (){
+                    $('.fadein').each(function(){
+                    var elementTop = $(this).offset().top;
+                    var scroll = $(window).scrollTop();
+                    var windowHeight = $(window).height();
+                    if (scroll > elementTop - windowHeight + 100){
+                        $(this).addClass('scrollin');
+                    }
+                    });
+                });
+            });
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(function () {
+            var set = 200;//ウインドウ上部からどれぐらいの位置で変化させるか
+            var boxTop = new Array;
+            var current = -1;
+            //各要素の位置
+            //position-nowは場所を取得したい対象の要素に付ける
+            $('.position-now').each(function (i) {
+                boxTop[i] = $(this).offset().top;
+            });
+            //最初の要素にclass="positiion-now"をつける
+            changeBox(0);
+            //スクロールした時の処理
+            $(window).scroll(function () {
+                scrollPosition = $(window).scrollTop();
+                for (var i = boxTop.length - 1; i >= 0; i--) {
+                if ($(window).scrollTop() > boxTop[i] - set) {
+                    changeBox(i);
+                    break;
+                }
+                };
+            });
+            //ナビの処理
+            function changeBox(secNum) {
+                if (secNum != current) {
+                current = secNum;
+                secNum2 = secNum + 1;//以下にクラス付与したい要素名と付与したいクラス名
+                $('nav li a').removeClass('link-current');
+
+                //位置によって個別に処理をしたい場合　
+                if (current == 0) {
+                    $('#top_link_js').addClass('link-current');
+                    // 現在地がsection1の場合の処理
+                } else if (current == 1) {
+                    $('#works_link_js').addClass('link-current');
+                    // 現在地がsection2の場合の処理
+                } else if (current == 2) {
+                    // 現在地がsection3の場合の処理
+                    $('#about_link_js').addClass('link-current');
+                }
+
+                }
+            };
+            });
+            $(function () {
+                $('a[href^="#"]').click(function () {
+                    var adjust = -100;
+                    var speed = 500;
+                    var href = $(this).attr("href");
+                    var target = $(href == "#" || href == "" ? 'html' : href);
+                    var position = target.offset().top + adjust;
+                    $("html, body").animate({ scrollTop: position }, speed, "swing");
+                    return false;
+                });
+            });
+
+
+            $(window).on('load', function(){
+                $('.loader-slide').addClass('open');
+            });
+
+
+            //変数定義
+            var navigationOpenFlag = false;
+            var navButtonFlag = true;
+            var focusFlag = false;
+            
+            //ハンバーガーメニュー
+                $(function(){
+            
+                $(document).on('click','.el_humburger',function(){
+                    if(navButtonFlag){
+                    spNavInOut.switch();
+                    //一時的にボタンを押せなくする
+                    setTimeout(function(){
+                        navButtonFlag = true;
+                    },200);
+                    navButtonFlag = false;
+                    }
+                });
+                $(document).on('click touchend', function(event) {
+                    if (!$(event.target).closest('.bl_header,.el_humburger').length && $('body').hasClass('js_humburgerOpen') && focusFlag) {
+                    focusFlag = false;
+                    //scrollBlocker(false);
+                    spNavInOut.switch();
+                    }
+                });
+                });
+            
+            //ナビ開く処理
+            function spNavIn(){
+                $('body').removeClass('js_humburgerClose');
+                $('body').addClass('js_humburgerOpen');
+                setTimeout(function(){
+                    focusFlag = true;
+                },200);
+                setTimeout(function(){
+                    navigationOpenFlag = true;
+                },200);
+
+                $('#overlay').fadeIn(200);
+            }
+            //ナビ閉じる処理
+            function spNavOut(){
+                $('body').removeClass('js_humburgerOpen');
+                $('body').addClass('js_humburgerClose');
+                setTimeout(function(){
+                    $(".uq_spNavi").removeClass("js_appear");
+                    focusFlag = false;
+                },200);
+                navigationOpenFlag = false;
+                $('#overlay').fadeOut(200);
+            }
+            
+            //ナビ開閉コントロール
+            var spNavInOut = {
+            switch:function(){
+                if($('body.spNavFreez').length){
+                return false;
+                }
+                if($('body').hasClass('js_humburgerOpen')){
+                spNavOut();
+                } else {
+                spNavIn();
+                }
+            }
+            };
+        </script>
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
+        <!--自作のJS-->
+        <script src="js/9-5-6.js"></script>
+
+        <script>
+        </script>
+
+    </body>

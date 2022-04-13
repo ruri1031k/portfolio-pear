@@ -33,6 +33,12 @@ footer{
 	font-weight: 400;
 }
 
+
+.w{
+	width:100%;
+}
+
+
 .top-logosize{
     width:5vw;
 }
@@ -80,6 +86,10 @@ footer{
 .tatenarabe1{
     display: flex;
     justify-content: center;
+}
+.tatenarabe2{
+	display: flex;
+	justify-content: flex-start;
 }
 
 .title-text{
@@ -485,8 +495,14 @@ footer{
 }
 
 
+.aaa{
+	font-size: 4vw;
+	background-color: #ffffff;
+	color: #ffffff;
+}
+
 .works-mv-space{
-	padding-top: 3%;
+	/* padding-top: 3%; */
 	padding-bottom: 5%;
 }
 .works-mv-title-moji-1{
@@ -524,8 +540,16 @@ footer{
 	color: #333333;
 	padding-bottom: 0.4%;
 }
-.works-promaru-size{
-	width:17%;
-	padding-left:2%;
-	padding-right: 2%;
+
+.promaru-irohani{
+	width: 60%;
+}
+
+.pro-size{
+	width: 70%;
+	padding-bottom: 7%;
+}
+
+.pro-size1{
+	width: 70%;
 }

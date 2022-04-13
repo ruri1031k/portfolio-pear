@@ -26,29 +26,55 @@
             <a href="#skill"><p class="header-text">SKILL</p></a>
             <a href="#sns"><p class="header-text">SNS/CONTACT</p></a>
         </div>
+
+        <div>
+            <p class="aaa">a</p>
+        </div>
+
         <div class="yokonarabe2 works-mv-space">
             <div class="mv-title-size">
                 <p class="works-mv-title-moji-1">いろはに</p>
                 <p class="works-mv-title-moji-2">2021-2022 WEBデザイン/コーディング</p>
                 <img class="title-line2"src="img/line2.png">
-                <p class="works-mv-title-moji-2">実習で制作した伝統工芸体験教室予約サイトです。</p>
+                <p class="works-mv-title-moji-2">実習で制作した架空の伝統工芸体験教室予約サイトです。</p>
                 <p class="works-mv-title-moji-3">スマートフォンを想定したWEBサイト制作に初挑戦しました。</p>
                 <p class="works-mv-title-moji-3">より良い労働環境を提供するために</p>
                 <p class="works-mv-title-moji-3">今を生きる私たちにできることを追求した作品です。</p>
             </div>
             <img class="mv-top-size"src="img/irohani-mv.png">
         </div>
+
+                <!--JAVA-->
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+                <script type="text/javascript">
+                $(function($) {
+                    const $bar = $('.header-color');
+                    const barHeight = $bar.outerHeight();
+                    const offset = $bar.offset();
+        
+                    $(window).scroll(function () {
+                    if($(window).scrollTop() > offset.top) {
+                        $bar.addClass('js-fixed');
+                        $('.aaa').css('padding-top',barHeight);
+                    } else {
+                        $bar.removeClass('js-fixed');
+                        $('.aaa').css('padding-top', 0);
+                    }
+                    });
+                });
+                </script>
+
         <div class="tatenarabe about-back about-space">
             <div>
                 <div class="title-space">
-                    <p class="title-text"id="about">CONCEPT</p>
+                    <p class="title-text"id="">CONCEPT</p>
                     <img class="title-line"src="img/line.png">
                 </div>
                 <div>
                     <p class="works-moji1">伝統工芸職人の10年後の未来を想像したとき、どんなことが考えられるでしょうか。</p>
-                    <p class="works-moji1">職人の高齢化で身体的負担は大きくなり、もしかしたら10年の間に後継者が見つからないまま職人を引退してしまう人もいるのではないか。</p>
+                    <p class="works-moji1">職人の高齢化で身体的負担は大きくなり、10年の間に後継者が見つからないまま職人を引退してしまう人もいるのではないか。</p>
                     <p class="works-moji1">デジタルコンテンツが発達する現代で、10年の間に「職人になりたい！」と志す若い世代がどのくらいいるだろうか。</p>
-                    <p class="works-moji1">「いろはに」は、若い世代に将来の選択肢として「伝統工芸職人」という職業があることを知るきっかけとなることを目指します。</p>
+                    <p class="works-moji1">「いろはに」は、若い世代に将来の選択肢として「伝統工芸職人」という職業があることを知るきっかけを提供します。</p>
 
                 </div>
             </div>
@@ -60,11 +86,29 @@
                     <img class="title-line"src="img/line.png">
                 </div>
             </div>
-            <div class="yokonarabe">
-                <img class="works-promaru-size"src="img/irohani-pro1.png">
-                <img class="works-promaru-size"src="img/irohani-pro2.png">
-                <img class="works-promaru-size"src="img/irohani-pro3.png">
-                <img class="works-promaru-size"src="img/irohani-pro4.png">
+            <div class="yokonarabe w about-space">
+                <img class="promaru-irohani"src="img/tsukuri.png">
+            </div>
+            <div class="tatenarabe">
+                <img class="pro-size"src="img/irohani-01.png">
+                <img class="pro-size"src="img/irohani-02.png">
+                <img class="pro-size"src="img/irohani-03.png">
+                <img class="pro-size1"src="img/irohani-04.png">
+            </div>
+        </div>
+        <div class="tatenarabe about-back about-space">
+            <div>
+                <div class="title-space">
+                    <p class="title-text"id="">FLOW</p>
+                    <img class="title-line"src="img/line.png">
+                </div>
+                <div>
+                    <p class="works-moji1">伝統工芸職人の10年後の未来を想像したとき、どんなことが考えられるでしょうか。</p>
+                    <p class="works-moji1">職人の高齢化で身体的負担は大きくなり、10年の間に後継者が見つからないまま職人を引退してしまう人もいるのではないか。</p>
+                    <p class="works-moji1">デジタルコンテンツが発達する現代で、10年の間に「職人になりたい！」と志す若い世代がどのくらいいるだろうか。</p>
+                    <p class="works-moji1">「いろはに」は、若い世代に将来の選択肢として「伝統工芸職人」という職業があることを知るきっかけを提供します。</p>
+
+                </div>
             </div>
         </div>
         <footer class="tatenarabe"> 
@@ -213,8 +257,6 @@
             }
             };
         </script>
-
-
 
 
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
